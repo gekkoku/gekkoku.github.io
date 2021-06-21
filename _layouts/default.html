@@ -2,10 +2,40 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>｛｛ page.title ｝｝ - @yoshiki_utakata</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/print.css" media="print">
+    <title>{{ page.title }} - @yoshiki_utakata</title>
   </head>
-
   <body>
-    ｛｛ content ｝｝
+    <header>
+      <div class="container">
+        <h1>
+          <a href="http://yoshikyoto.github.io/text/">
+            @yoshiki_utakata
+          </a>
+        </h1>
+        <h2>知見と知識とかをまとめ</h2>
+        <section id="downloads">
+          <a href="https://github.com/yoshikyoto/text" class="btn btn-github">
+            <span class="icon"></span>View on GitHub
+          </a>
+        </section>
+      </div>
+    </header>
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
+      <section>
+        <h2>ページ一覧</h2>
+        <ul>
+          {% for html_page in site.html_pages %}
+          <li><a href="{{ html_page.url }}">{{ html_page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
   </body>
 </html>

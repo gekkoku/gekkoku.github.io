@@ -1,1 +1,0 @@
-# gekkoku.github.io
